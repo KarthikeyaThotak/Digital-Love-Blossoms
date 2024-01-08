@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>For Nithra</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</head>
+
+<body style="background-color: black;" onload="typeWriter()">
+
+    <center>
+        <h1 style="color:white" id="demo"></h1>
+    </center>
+
+    <script>
+        var typed = new Typed('#demo', {
+            strings: ['[Valentine-Name], we have hardly 540 days in this college life, So I will come straight to the point...', "I just wanted to say that I'm absolutely crazy about you!... I love how you bring excitement and joy into my life. You know, I enjoy doing crazy things, and I've found my perfect crime partner...that's you!", "And hey, about studies, I've got to admit, you're pretty amazing. But here's the thing, I like a good challenge! 😏 I'm up for it! Let's embark on this crazy journey together, study hard, and create some unforgettable moments...", "What do you say? 😄"],
+            typeSpeed: 60,
+        });
+    </script>
+    <div class="gif_container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDdtZ2JiZDR0a3lvMWF4OG8yc3p6Ymdvd3g2d245amdveDhyYmx6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/cLS1cfxvGOPVpf9g3y/giphy.gif" alt="Cute animated illustration">
+    </div>
+    <div class="buttons">
+        <button class="btn" id="yesButton" style="display: none;" onclick="nextPage()">Yes</button>
+        <button class="btn" id="noButton" style="display: none;" onmouseover="moveButton()" onclick="moveButton()">No</button>
+
+        <script>
+            function nextPage() {
+                window.location.href = "yes.html";
+            }
+
+            function moveButton() {
+                var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                document.getElementById('noButton').style.left = `${x}px`;
+                document.getElementById('noButton').style.top = `${y}px`;
+            }
+
+            function showButtons() {
+                document.getElementById('yesButton').style.display = "block";
+                document.getElementById('noButton').style.display = "block";
+            }
+
+            function hideButtons() {
+                document.getElementById('yesButton').style.display = "none";
+                document.getElementById('noButton').style.display = "none";
+            }
+
+            // Call the function to hide buttons initially
+            document.addEventListener("DOMContentLoaded", function () {
+                hideButtons();
+            });
+
+            // Call the function to show buttons after 30 seconds
+            setTimeout(function () {
+                showButtons();
+            }, 49000);
+        </script>
+    </div>
+
+</body>
+
+</html>
